@@ -3,7 +3,6 @@ def questao1():
     ndnumber = int(input("Digite o segundo número: "))
     rdnumber = int(input("Digite o terceiro número: "))
     conjunto = stnumber == ndnumber == rdnumber
-
     if stnumber > ndnumber and stnumber > rdnumber:
         print(f"{stnumber} é o maior.")
     elif ndnumber > stnumber and ndnumber > rdnumber:
