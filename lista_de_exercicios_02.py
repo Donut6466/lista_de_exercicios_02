@@ -76,3 +76,79 @@ def questao5():
             print("Dezembro")
         case _:
             print("Ocorreu um erro. Tente novamente.")
+def questao6():
+    A = float(input("Digite o valor A: "))
+    B = float(input("Digite o valor B: "))
+    C = float(input("Digite o valor C: "))
+    equilatero = A == B == C
+    eita = ((B**2) + (C**2))
+    opa = (A**2)
+    if A >= (B + C):
+        print("Não forma triângulo.")
+    else:
+        if opa == eita:
+            print("Triângulo retângulo.")
+        elif opa > eita:
+            print("Triângulo obtusângulo.")
+        elif opa < eita:
+            print("Triângulo acutangulo.")
+    if equilatero == False and A == B or A == C or B == C:
+            print("Triângulo isosceles.")
+    elif equilatero == True:
+        print("Triângulo equilatero.")
+def questao7():
+    A = int(input("Digite o valor de A: "))
+    B = int(input("Digite o valor de B: "))
+    C = int(input("Digite o valor de C: "))
+    D = int(input("Digite o valor de D: "))
+    if (B > C) and (D > A) and (C + D > A + B) and (C > 0) and (D > 0) and ((A % 2)==0):
+        print ("Valores aceitos.")
+    else:
+        print("Valores não aceitos.")
+def questao8():
+    print("A duração mínima é de 1 minuto e a duração máxima é de 24 horas.")
+    hinicial = int(input("Digite a hora inicial: "))
+    minicial = int(input("Digite o minuto inicial: "))
+    hfinal = int(input("Digite a hora final: "))
+    mfinal = int(input("Digite o minuto final: "))
+    hduracao = hinicial - hfinal
+    if hduracao < 1:
+        hduracao = hduracao * (-1)
+    mduracao = minicial - mfinal
+    if mduracao < 1:
+        hduracao = hduracao * (-1)
+    totalduracao = hduracao + mduracao
+    if totalduracao > 24:
+        print("A duração tem que ser menor.")
+    elif totalduracao < 1:
+        print("A duração tem que ser maior.")
+    else: print(f"O jogo durou {hduracao} horas e {mduracao} minutos.")
+def questao9():
+    import random
+    computador = random.randint(0, 2)
+    if computador == 0:
+        texto = 'pedra'
+    elif computador == 1:
+        texto = 'papel'
+    else:
+        texto = 'tesoura'
+    jogador = input("Escolha pedra, papel ou tesoura: ").lower()
+    if (jogador == 'pedra' and texto == 'tesoura') or \
+    (jogador == 'tesoura' and texto == 'papel') or \
+    (jogador == 'papel' and texto == 'pedra'):
+        print('Jogador venceu!')
+    else:
+        print('Computador venceu!')
+    if jogador == texto:
+        print('Empate!')
+def questao10():
+    import random
+    numero_secreto = random.randint(1, 100)
+    palpite = 0
+    while palpite != numero_secreto:
+        palpite = int(input("Digite seu palpite (entre 1 e 100): "))
+        if palpite > numero_secreto:
+            print("Tente um número menor.")
+        elif palpite < numero_secreto:
+            print("Tente um número maior.")
+    print(f"Parabéns!! Você acertou o número secreto: {numero_secreto}")
